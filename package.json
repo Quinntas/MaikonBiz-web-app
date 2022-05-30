@@ -8,10 +8,22 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "dependencies": {
+    "cookie": "^0.5.0",
+    "dotenv": "^16.0.1",
+    "dotenv-safe": "^8.2.0",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
     "next": "12.1.6",
+    "next-auth": "^4.3.4",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-hook-form": "^7.31.3"
   },
   "devDependencies": {
     "eslint": "8.16.0",
