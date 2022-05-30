@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { verify_token, logout } from "/utils/requests";
+import { verifyToken, logout, Register, login } from "/utils/requests";
 
 function RegisterPage(props) {
   const router = useRouter();
@@ -15,7 +15,7 @@ function RegisterPage(props) {
   useEffect(() => {
     const checkToken = async () => {
       if (props.token != "") {
-        const res = await verify_token(props.token);
+        const res = await verifyToken(props.token);
         if (res) {
           router.push("/");
         } else {
@@ -27,52 +27,16 @@ function RegisterPage(props) {
     checkToken();
   }, []);
 
-  const Register = (form) => {
-    const res = fetch("/api/register", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        user: form,
-      }),
-    })
-      .then((res) => {
-        if (res.ok) return res.json();
-        return undefined;
-      })
-      .then((data) => {
-        if (data == undefined) alert("?");
-        else Login(form.email, form.password);
-      });
-  };
-
-  const Login = (email, password) => {
-    const res = fetch("/api/login", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-    })
-      .then((res) => {
-        if (res.ok) return res.json();
-        return undefined;
-      })
-      .then((data) => {
-        if (data == undefined) alert("?");
-        else router.push("/");
-      });
+  const registerHandler = async (form) => {
+    Register(form);
+    if (await login(form.email, form.password)) router.push("/");
   };
 
   return (
     <>
       <h1> Register Page </h1>
 
-      <form onSubmit={handleSubmit(Register)}>
+      <form onSubmit={handleSubmit(registerHandler)}>
         <input
           id="email"
           name="email"

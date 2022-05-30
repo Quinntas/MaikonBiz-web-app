@@ -6,6 +6,6 @@ export default (req, res) => {
   jwt.verify(req.body.token, process.env.JWT_SECRET, function (err, decoded) {
     if (err) res.status(401).json({ sucess: false });
 
-    res.status(200).json({ sucess: true, data: decoded });
+    res.status(200).json({ sucess: true, tokenInfo: decoded });
   });
 };

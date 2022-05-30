@@ -7,7 +7,7 @@ function logout() {
   });
 }
 
-async function verify_token(token) {
+async function verifyToken(token) {
   return fetch("/api/verify-token", {
     method: "post",
     headers: {
@@ -25,4 +25,35 @@ async function verify_token(token) {
     });
 }
 
-export { logout, verify_token };
+const login = async (email, password) => {
+  return await fetch("/api/login", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email,
+      password: password,
+    }),
+  }).then((res) => {
+    if (res.ok) return res.json();
+    return undefined;
+  });
+};
+
+const Register = async (data) => {
+  return await fetch("/api/register", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      user: data,
+    }),
+  }).then((res) => {
+    if (res.ok) return res.json();
+    return undefined;
+  });
+};
+
+export { logout, verifyToken, login, Register };

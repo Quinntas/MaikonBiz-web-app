@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { verify_token, logout } from "/utils/requests";
+import { verifyToken, logout, login } from "/utils/requests";
 
 function LoginPage(props) {
   const router = useRouter();
@@ -15,7 +15,7 @@ function LoginPage(props) {
   useEffect(() => {
     const checkToken = async () => {
       if (props.token != "") {
-        const res = await verify_token(props.token);
+        const res = await verifyToken(props.token);
         if (res) {
           router.push("/");
         } else {
@@ -27,32 +27,15 @@ function LoginPage(props) {
     checkToken();
   }, []);
 
-  const login = (form) => {
-    const res = fetch("/api/login", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: form.email,
-        password: form.password,
-      }),
-    })
-      .then((res) => {
-        if (res.ok) return res.json();
-        return undefined;
-      })
-      .then((data) => {
-        if (data == undefined) alert("?");
-        else router.push("/");
-      });
+  const loginHandler = async (form) => {
+    if (await login(form.email, form.password)) router.push("/");
   };
 
   return (
     <>
       <h1> Login Page </h1>
 
-      <form onSubmit={handleSubmit(login)}>
+      <form onSubmit={handleSubmit(loginHandler)}>
         <input
           id="email"
           name="email"
