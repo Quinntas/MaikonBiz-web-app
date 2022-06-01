@@ -1,6 +1,7 @@
 import { verifyToken, logout } from "/utils/requests";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Layout from "../components/layout";
 
 function HomePage(props) {
   const router = useRouter();
@@ -20,42 +21,9 @@ function HomePage(props) {
   }, []);
 
   return (
-    <>
+    <Layout>
       <h1>Hello World</h1>
-
-      <button
-        onClick={() => {
-          router.push("auth/login");
-        }}
-      >
-        Login
-      </button>
-      <button
-        onClick={() => {
-          router.push("auth/register");
-        }}
-      >
-        Register
-      </button>
-      <button
-        onClick={() => {
-          logout();
-        }}
-      >
-        Logout
-      </button>
-      <button
-        onClick={() => {
-          router.push("persona");
-        }}
-      >
-        Personas
-      </button>
-
-      {(() => {
-        if (props.token != "") return <h1>Logged in as {props.token}</h1>;
-      })()}
-    </>
+    </Layout>
   );
 }
 
