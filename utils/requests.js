@@ -1,59 +1,30 @@
-function logout() {
-  fetch("/api/logout", {
-    method: "post",
+async function request(url, method, bodyObject) {
+  return await fetch(url, {
+    method: method,
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify(bodyObject),
   });
+}
+
+async function logout() {
+  return await request("/api/logout", "GET");
 }
 
 async function verifyToken(token) {
-  return fetch("/api/verify-token", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ token: token }),
-  })
-    .then((res) => {
-      if (res.ok) {
-        return res.json();
-      } else return undefined;
-    })
-    .then((data) => {
-      return data;
-    });
+  return await request("/api/verify-token", "POST", { token: token });
 }
 
-const login = async (email, password) => {
-  return await fetch("/api/login", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email: email,
-      password: password,
-    }),
-  }).then((res) => {
-    if (res.ok) return res.json();
-    return undefined;
+async function login(email, password) {
+  return await request("/api/login", "POST", {
+    email: email,
+    password: password,
   });
-};
+}
 
-const Register = async (data) => {
-  return await fetch("/api/register", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      user: data,
-    }),
-  }).then((res) => {
-    if (res.ok) return res.json();
-    return undefined;
-  });
-};
+async function Register(data) {
+  return await request("/api/register", "POST", { user: data });
+}
 
 export { logout, verifyToken, login, Register };

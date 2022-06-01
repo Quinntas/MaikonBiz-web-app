@@ -13,7 +13,7 @@ function PersonaPage({ data }) {
                 pathname: "/persona/" + personaId,
               }}
             >
-              {personaId || ""}
+              <a>{personaId || ""}</a>
             </Link>
           </li>
         ))}
@@ -23,8 +23,11 @@ function PersonaPage({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(process.env.BASE_URL + "api/persona/0");
-  const data = await res.json();
+  const data = await fetch(process.env.BASE_URL + "api/persona/0").then(
+    (res) => {
+      return res.json();
+    }
+  );
   return { props: { data } };
 }
 

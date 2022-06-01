@@ -28,7 +28,8 @@ function LoginPage(props) {
   }, []);
 
   const loginHandler = async (form) => {
-    if (await login(form.email, form.password)) router.push("/");
+    const res = await login(form.email, form.password);
+    if (res.ok) router.push("/");
   };
 
   return (

@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model User {
+  id          String    @id @default(cuid())
+  publicId    String    @default(uuid())
+  createdOn   String
+  modifiedOn  String
+  phoneNumber String
+  email       String    @unique
+  password    String
+  fullName    String
+  nickName    String
+  avatar      String
+  role        String
+  identifyAs  String
+  personas    Persona[]
+  address     Address[]
+}
+
+model Address {
+  id         Int     @id @default(autoincrement())
+  createdOn  String
+  modifiedOn String
+  Address1   String
+  Address2   String
+  City       String
+  State      String
+  Country    String
+  PostalCode String
+  User       User?   @relation(fields: [userId], references: [id])
+  userId     String?
+}
+
+model Persona {
+  id         String            @id @default(cuid())
+  publicId   String            @default(uuid())
+  createdOn  String
+  modifiedOn String
+  author     User              @relation(fields: [authorId], references: [id])
+  authorId   String
+  questions  PersonaQuestion[]
+}
+
+model PersonaQuestion {
+  id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
+  Persona   Persona? @relation(fields: [personaId], references: [id])
+  personaId String?
+}
