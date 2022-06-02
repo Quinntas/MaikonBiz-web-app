@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { verifyToken, logout, login } from "/utils/requests";
+import Layout from "../../components/layout";
 
 function LoginPage(props) {
   const router = useRouter();
@@ -33,7 +34,7 @@ function LoginPage(props) {
   };
 
   return (
-    <>
+    <Layout>
       <h1> Login Page </h1>
 
       <form onSubmit={handleSubmit(loginHandler)}>
@@ -65,7 +66,7 @@ function LoginPage(props) {
       >
         Logout
       </button>
-    </>
+    </Layout>
   );
 }
 

@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { verifyToken, logout, Register, login } from "/utils/requests";
+import Layout from "../../components/layout";
 
 function RegisterPage(props) {
   const router = useRouter();
@@ -47,7 +48,7 @@ function RegisterPage(props) {
   };
 
   return (
-    <>
+    <Layout>
       <h1> Register Page </h1>
 
       <form onSubmit={handleSubmit(registerHandler)}>
@@ -131,7 +132,7 @@ function RegisterPage(props) {
       >
         Logout
       </button>
-    </>
+    </Layout>
   );
 }
 

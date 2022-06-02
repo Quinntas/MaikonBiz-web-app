@@ -1,5 +1,7 @@
+import Layout from "../../components/layout";
+
 function PersonaIdPage({ data }) {
-  return <></>;
+  return <Layout></Layout>;
 }
 
 export async function getServerSideProps(context) {
