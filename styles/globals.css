@@ -56,7 +56,7 @@
   
   body {
 	margin: 0;
-	font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Myriad Pro";
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -81,7 +81,7 @@
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin-top: 0;
 	margin-bottom: 0.5rem;
-	font-family: "Poppins", "Rubik", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Myriad Pro";
 	font-weight: 600;
 	line-height: 1.2;
 	color: #2F281E;
@@ -236,7 +236,7 @@
   code,
   kbd,
   samp {
-	font-family: var(--bs-font-monospace);
+	font-family: "Myriad Pro";
 	font-size: 1em;
 	direction: ltr /* rtl:ignore */;
 	unicode-bidi: bidi-override;
@@ -3449,14 +3449,14 @@
   
   .btn-warning {
 	color: #FFFEFE;
-	background-color: #FF9900;
-	border-color: #FF9900;
+	background-color: #FF8200;
+	border-color: #FF8200;
   }
   
   .btn-warning:hover {
 	color: #FFFEFE;
-	background-color: #d98200;
-	border-color: #cc7a00;
+	background-color: #B56300;
+	border-color: #B56300;
   }
   
   .btn-check:focus + .btn-warning, .btn-warning:focus {
@@ -6232,7 +6232,7 @@
 	z-index: 1080;
 	display: block;
 	margin: 0;
-	font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Myriad Pro";
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.5;
@@ -6345,7 +6345,7 @@
 	z-index: 1070;
 	display: block;
 	max-width: 276px;
-	font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Myriad Pro";
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.5;
@@ -9340,7 +9340,7 @@
   }
   
   .text-warning {
-	color: #FF9900 !important;
+	color: #FF8200 !important;
   }
   
   .text-danger {
@@ -16576,7 +16576,7 @@
   .pagination,
   .valid-feedback,
   .invalid-feedback {
-	font-family: "Poppins", "Rubik", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Myriad Pro";
   }
   
   pre {
@@ -16633,15 +16633,15 @@
   |   Font family
   -----------------------------------------------*/
   .font-sans-serif {
-	font-family: "Poppins", "Rubik", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Myriad Pro";
   }
   
   .font-base {
-	font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Myriad Pro";
   }
   
   .font-cursive {
-	font-family: "Volkhov", "DM Serif Display", cursive;
+	font-family: "Myriad Pro";
   }
   
   /*-----------------------------------------------
@@ -17436,7 +17436,7 @@
   }
   
   .hero-title {
-	font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Myriad Pro";
 	font-weight: 700;
 	font-size: 2.88651rem;
 	color: #2F281E;

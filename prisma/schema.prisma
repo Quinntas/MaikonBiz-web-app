@@ -42,19 +42,25 @@ model Address {
 }
 
 model Persona {
-  id         String            @id @default(cuid())
-  publicId   String            @default(uuid())
+  id         Int         @id @default(autoincrement())
   createdOn  String
   modifiedOn String
-  author     User              @relation(fields: [authorId], references: [id])
+  author     User        @relation(fields: [authorId], references: [id])
   authorId   String
-  questions  PersonaQuestion[]
+  questions  PersonaQA[]
 }
 
 model PersonaQuestion {
-  id        Int      @id @default(autoincrement())
+  id        Int         @id @default(autoincrement())
   question  String
-  answer    String
-  Persona   Persona? @relation(fields: [personaId], references: [id])
-  personaId String?
+  PersonaQA PersonaQA[]
+}
+
+model PersonaQA {
+  id                Int             @id @default(autoincrement())
+  question          PersonaQuestion @relation(fields: [personaQuestionId], references: [id])
+  answer            String
+  Persona           Persona?        @relation(fields: [personaId], references: [id])
+  personaId         Int?
+  personaQuestionId Int
 }

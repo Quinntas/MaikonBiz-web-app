@@ -14,84 +14,162 @@ export default function Footer(props) {
       <section className="pb-2 pb-lg-5">
         <div className="container">
           <div className="row border-top border-top-secondary pt-7">
-            <div className="col-lg-3 col-md-6 mb-4 mb-md-6 mb-lg-0 mb-sm-2 order-1 order-md-1 order-lg-1">
-              <img
-                className="mb-4"
-                src="assets/img/logo.svg"
-                width="184"
-                alt=""
-              />
-            </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 order-3 order-md-3 order-lg-2">
-              <p className="fs-2 mb-lg-4">Links Rapidos</p>
+              <p className="fs-2 mb-lg-4">Planejar</p>
               <ul className="list-unstyled mb-0">
                 <li className="mb-1">
                   <a
                     className="link-900 text-secondary text-decoration-none"
-                    href="#!"
+                    href="https://maikon.biz/tag/buyer-persona/"
                   >
-                    Sobre
+                    Buyer Persona
                   </a>
                 </li>
                 <li className="mb-1">
                   <a
                     className="link-900 text-secondary text-decoration-none"
-                    href="#!"
+                    href="https://maikon.biz/tag/diagnostico/"
                   >
-                    Blog
+                    Diagnóstico
                   </a>
                 </li>
                 <li className="mb-1">
                   <a
                     className="link-900 text-secondary text-decoration-none"
-                    href="#!"
+                    href="https://maikon.biz/tag/equipe-de-marketing/"
                   >
-                    Contato
+                    Equipe de Marketing
                   </a>
                 </li>
                 <li className="mb-1">
                   <a
                     className="link-900 text-secondary text-decoration-none"
-                    href="#!"
+                    href="https://maikon.biz/tag/estrategia-de-marketing/"
                   >
-                    FAQ
+                    Estratégia de Marketing
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/investimento/"
+                  >
+                    Investimento
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/tecnologia/"
+                  >
+                    Tecnologia
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 order-4 order-md-4 order-lg-3">
-              <p className="fs-2 mb-lg-4">Legal stuff</p>
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 order-3 order-md-3 order-lg-2">
+              <p className="fs-2 mb-lg-4">Posicionar</p>
               <ul className="list-unstyled mb-0">
                 <li className="mb-1">
                   <a
                     className="link-900 text-secondary text-decoration-none"
-                    href="#!"
+                    href="https://maikon.biz/tag/blog-de-conteudo/"
                   >
-                    Disclaimer
+                    Blog de Conteúdo
                   </a>
                 </li>
                 <li className="mb-1">
                   <a
                     className="link-900 text-secondary text-decoration-none"
-                    href="#!"
+                    href="https://maikon.biz/tag/classificados/"
                   >
-                    Financing
+                    Classificados
                   </a>
                 </li>
                 <li className="mb-1">
                   <a
                     className="link-900 text-secondary text-decoration-none"
-                    href="#!"
+                    href="https://maikon.biz/tag/loja-virtual/"
                   >
-                    Privacy Policy
+                    Loja Virtual
                   </a>
                 </li>
                 <li className="mb-1">
                   <a
                     className="link-900 text-secondary text-decoration-none"
-                    href="#!"
+                    href="https://maikon.biz/tag/marketplace/"
                   >
-                    Terms of Service
+                    Marketplace
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/marca/"
+                  >
+                    Marca
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/redes-sociais/"
+                  >
+                    Redes Sociais
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 order-3 order-md-3 order-lg-2">
+              <p className="fs-2 mb-lg-4">Relacionar</p>
+              <ul className="list-unstyled mb-0">
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/automacao-de-marketing/"
+                  >
+                    Automação de Marketing
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/base-de-leads/"
+                  >
+                    Base de Leads
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/email-marketing/"
+                  >
+                    E-mail Marketing
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/marketplace/"
+                  >
+                    Marketplace
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/midias-sociais/"
+                  >
+                    Mídias Sociais
+                  </a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="link-900 text-secondary text-decoration-none"
+                    href="https://maikon.biz/tag/nutricao-de-leads/"
+                  >
+                    Nutrição de Leads
                   </a>
                 </li>
               </ul>

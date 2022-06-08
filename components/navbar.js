@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="container">
           <Link href="/">
             <a className="navbar-brand">
-              <img src="assets/img/logo.svg" height="31" alt="logo" />
+              <img src="nav-logo.jpeg" height="31" alt="logo" />
             </a>
           </Link>
 

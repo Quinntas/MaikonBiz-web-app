@@ -22,35 +22,30 @@ function HomePage(props) {
 
   return (
     <Layout>
-      <section class="pt-7">
+      <section className="pt-7">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6 text-md-start text-center py-6">
               <h1 className="mb-4 fs-9 fw-bold">Crie aqui sua persona</h1>
               <p className="mb-6 lead text-secondary">
-                Tools tutorials, design and innovation experts, all
-                <br class="d-none d-xl-block" />
-                in one place! The most intuitive way to imagine
-                <br class="d-none d-xl-block" />
-                your next user experience.
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                <br className="d-none d-xl-block" />
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                <br className="d-none d-xl-block" />
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
               </p>
               <div className="text-center text-md-start">
-                <a class="btn btn-warning me-3 btn-lg" href="#!" role="button">
-                  Get started
-                </a>
                 <a
-                  class="btn btn-link text-warning fw-medium"
+                  className="btn btn-warning me-3 btn-lg"
                   href="#!"
                   role="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#popupVideo"
                 >
-                  <span class="fas fa-play me-2"></span>Watch the video{" "}
+                  Get started
                 </a>
               </div>
             </div>
             <div className="col-md-6 text-end">
-              <img class="pt-7 pt-md-0 img-fluid" src="vercel.svg" alt="" />
+              <img className="pt-7 pt-md-0 img-fluid" src="vercel.svg" alt="" />
             </div>
           </div>
         </div>
@@ -58,23 +53,54 @@ function HomePage(props) {
       <div
         className="modal fade"
         id="popupVideo"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="popupVideo"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
+        <div className="modal-dialog modal-dialog-centered modal-lg">
+          <div className="modal-content">
             <iframe
               className="rounded"
               style={{ width: "100%", height: "500px" }}
               src="https://www.youtube.com/embed/DLzxrzFCyOs"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
       </div>
+
+      <section className="pt-5" id="validation">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <h2 className="mb-2 fs-7 fw-bold">O que é a MAIKON.biz</h2>
+              <br />
+              <p className="mb-4 fw-medium text-secondary">
+                A MAIKON.biz é uma empresa especializada em estratégias de
+                Inbound Marketing para aumento de vendas e Cursos Online de
+                Marketing Digital para empresas.
+                <br />
+                <br />
+                Também oferecemos Consultoria de Inbound Marketing, Mentoria
+                para Startups, Assessoria de Marketing Digital e Cursos In
+                Company.
+                <br />
+                <br />
+                <h5>Maikon Richardson</h5>
+              </p>
+            </div>
+            <div className="col-md-5 text-end">
+              <img
+                className="pt-7 pt-md-0 img-fluid"
+                src="https://maikon.biz/wp-content/uploads/2020/08/logo-maikon.biz-site-inbound-marketing-1280x720-v2-1280x720.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
