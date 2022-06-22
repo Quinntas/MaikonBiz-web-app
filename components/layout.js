@@ -12,12 +12,17 @@ export default function Layout({ children }) {
         {children}
         <Footer />
       </main>
-      <Script src="vendors/popperjs/popper.js" />
-      <Script src="vendors/bootstrap/bootstrap.min.js" />
-      <Script src="vendors/is/is.min.js" />
-      <Script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll" />
-      <Script src="vendors/fontawesome/all.min.js" />
-      <Script src="js/theme.js"></Script>
+      <Script src="https://code.jquery.com/jquery-3.3.1.min.js" />
+      <Script src="js/jquery-3.3.1.min.js" />
+      <Script src="js/bootstrap.min.js" />
+      <Script src="js/jquery.nice-select.min.js" />
+      <Script src="js/jquery.nicescroll.min.js" />
+      <Script src="js/jquery.magnific-popup.min.js" />
+      <Script src="js/jquery.countdown.min.js" />
+      <Script src="js/jquery.slicknav.js" />
+      <Script src="js/owl.carousel.min.js" />
+      <Script src="js/mixitup.min.js" />
+      <Script src="js/main.js" />
     </>
   );
 }

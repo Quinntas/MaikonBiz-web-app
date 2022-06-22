@@ -22,81 +22,68 @@ function HomePage(props) {
 
   return (
     <Layout>
-      <section className="pt-7">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6 text-md-start text-center py-6">
-              <h1 className="mb-4 fs-9 fw-bold">Crie aqui sua persona</h1>
-              <p className="mb-6 lead text-secondary">
-                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                <br className="d-none d-xl-block" />
-                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                <br className="d-none d-xl-block" />
-                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-              </p>
-              <div className="text-center text-md-start">
-                <a
-                  className="btn btn-warning me-3 btn-lg"
-                  href="#!"
-                  role="button"
+      <section class="product spad">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="filter__controls">
+                <li class="active" data-filter="*">
+                  Best Sellers
+                </li>
+                <li data-filter=".new-arrivals">New Arrivals</li>
+                <li data-filter=".hot-sales">Hot Sales</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row product__filter">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+              <div class="product__item">
+                <div
+                  class="product__item__pic set-bg"
+                  data-setbg="img/product/product-1.jpg"
                 >
-                  Get started
-                </a>
+                  <span class="label">New</span>
+                  <ul class="product__hover">
+                    <li>
+                      <a href="#"></a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        {" "}
+                        <span>Compare</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="product__item__text">
+                  <h6>Piqué Biker Jacket</h6>
+                  <a href="#" class="add-cart">
+                    + Add To Cart
+                  </a>
+                  <div class="rating">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                  <h5>$67.24</h5>
+                  <div class="product__color__select">
+                    <label htmlFor="pc-1">
+                      <input type="radio" id="pc-22"></input>
+                    </label>
+                    <label class="active black" htmlFor="pc-2">
+                      <input type="radio" id="pc-22"></input>
+                    </label>
+                    <label class="grey" htmlFor="pc-3">
+                      <input type="radio" id="pc-22"></input>
+                    </label>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="col-md-6 text-end">
-              <img className="pt-7 pt-md-0 img-fluid" src="vercel.svg" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <div
-        className="modal fade"
-        id="popupVideo"
-        tabIndex="-1"
-        aria-labelledby="popupVideo"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered modal-lg">
-          <div className="modal-content">
-            <iframe
-              className="rounded"
-              style={{ width: "100%", height: "500px" }}
-              src="https://www.youtube.com/embed/DLzxrzFCyOs"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
-
-      <section className="pt-5" id="validation">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <h2 className="mb-2 fs-7 fw-bold">O que é a MAIKON.biz</h2>
-              <br />
-              <p className="mb-4 fw-medium text-secondary">
-                A MAIKON.biz é uma empresa especializada em estratégias de
-                Inbound Marketing para aumento de vendas e Cursos Online de
-                Marketing Digital para empresas.
-                <br />
-                <br />
-                Também oferecemos Consultoria de Inbound Marketing, Mentoria
-                para Startups, Assessoria de Marketing Digital e Cursos In
-                Company.
-                <br />
-                <br />
-                <h5>Maikon Richardson</h5>
-              </p>
-            </div>
-            <div className="col-md-5 text-end">
-              <img
-                className="pt-7 pt-md-0 img-fluid"
-                src="https://maikon.biz/wp-content/uploads/2020/08/logo-maikon.biz-site-inbound-marketing-1280x720-v2-1280x720.png"
-                alt=""
-              />
             </div>
           </div>
         </div>

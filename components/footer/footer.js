@@ -11,203 +11,94 @@ export default function Footer(props) {
 
   return (
     <>
-      <section className="pb-2 pb-lg-5">
+      <footer class="footer">
         <div className="container">
-          <div className="row border-top border-top-secondary pt-7">
-            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 order-3 order-md-3 order-lg-2">
-              <p className="fs-2 mb-lg-4">Planejar</p>
-              <ul className="list-unstyled mb-0">
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/buyer-persona/"
-                  >
-                    Buyer Persona
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/diagnostico/"
-                  >
-                    Diagnóstico
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/equipe-de-marketing/"
-                  >
-                    Equipe de Marketing
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/estrategia-de-marketing/"
-                  >
-                    Estratégia de Marketing
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/investimento/"
-                  >
-                    Investimento
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/tecnologia/"
-                  >
-                    Tecnologia
-                  </a>
-                </li>
-              </ul>
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="footer__about">
+                <div className="footer__logo">
+                  <a href="#"></a>
+                </div>
+                <p>
+                  The customer is at the heart of our unique business model,
+                  which includes design.
+                </p>
+                <a href="#"></a>
+              </div>
             </div>
-            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 order-3 order-md-3 order-lg-2">
-              <p className="fs-2 mb-lg-4">Posicionar</p>
-              <ul className="list-unstyled mb-0">
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/blog-de-conteudo/"
-                  >
-                    Blog de Conteúdo
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/classificados/"
-                  >
-                    Classificados
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/loja-virtual/"
-                  >
-                    Loja Virtual
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/marketplace/"
-                  >
-                    Marketplace
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/marca/"
-                  >
-                    Marca
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/redes-sociais/"
-                  >
-                    Redes Sociais
-                  </a>
-                </li>
-              </ul>
+            <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+              <div className="footer__widget">
+                <h6>Shopping</h6>
+                <ul>
+                  <li>
+                    <a href="#">Clothing Store</a>
+                  </li>
+                  <li>
+                    <a href="#">Trending Shoes</a>
+                  </li>
+                  <li>
+                    <a href="#">Accessories</a>
+                  </li>
+                  <li>
+                    <a href="#">Sale</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-
-            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 order-3 order-md-3 order-lg-2">
-              <p className="fs-2 mb-lg-4">Relacionar</p>
-              <ul className="list-unstyled mb-0">
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/automacao-de-marketing/"
-                  >
-                    Automação de Marketing
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/base-de-leads/"
-                  >
-                    Base de Leads
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/email-marketing/"
-                  >
-                    E-mail Marketing
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/marketplace/"
-                  >
-                    Marketplace
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/midias-sociais/"
-                  >
-                    Mídias Sociais
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="link-900 text-secondary text-decoration-none"
-                    href="https://maikon.biz/tag/nutricao-de-leads/"
-                  >
-                    Nutrição de Leads
-                  </a>
-                </li>
-              </ul>
+            <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="footer__widget">
+                <h6>Shopping</h6>
+                <ul>
+                  <li>
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#">Payment Methods</a>
+                  </li>
+                  <li>
+                    <a href="#">Delivary</a>
+                  </li>
+                  <li>
+                    <a href="#">Return Exchanges</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="col-lg-3 col-md-6 col-6 mb-4 mb-lg-0 order-2 order-md-2 order-lg-4">
-              <p className="fs-2 mb-lg-4">
-                Entre para nossa lista e receba conteúdos exclusivos
-              </p>
-              <form className="mb-3">
-                <input
-                  className="form-control"
-                  type="email"
-                  placeholder="Seu email"
-                  aria-label="phone"
-                />
-              </form>
-              <button className="btn btn-warning fw-medium py-1">Enviar</button>
+            <div className="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+              <div className="footer__widget">
+                <h6>NewLetter</h6>
+                <div className="footer__newslatter">
+                  <p>
+                    Be the first to know about new arrivals, look books, sales
+                    promos!
+                  </p>
+                  <form action="#">
+                    <input type="text" placeholder="Your email"></input>
+                    <button type="submit">
+                      <span className="icon_mail_alt"></span>
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="text-center py-0">
-        <div className="container">
-          <div className="container border-top py-3">
-            <div className="row justify-content-between">
-              <div className="col-12 col-md-auto mb-1 mb-md-0">
-                <p className="mb-0">
-                  &copy; MAIKON.biz | Todos os direitos reservados.{" "}
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <div className="footer__copyright__text">
+                <p>
+                  Copyright ©
+                  <script>document.write(new Date().getFullYear());</script>2020
+                  All rights reserved | This template is made with{" "}
+                  <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
+                  <a href="https://colorlib.com" target="_blank">
+                    Colorlib
+                  </a>
                 </p>
               </div>
-              <div className="col-12 col-md-auto">
-                <p className="mb-0">aaaaaaa</p>
-              </div>
             </div>
           </div>
         </div>
-      </section>
+      </footer>
     </>
   );
 }
