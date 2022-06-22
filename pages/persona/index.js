@@ -14,25 +14,61 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
           <div className="container">
             <div className="row">
               {data.data.map((persona) => (
-                <div className="col-lg-3 col-sm-6 mb-2" key={persona.publicId}>
+                <div className="col-lg-3 col-sm-6 mb-2" key={persona.id}>
                   {" "}
                   <Link
                     href={{
-                      pathname: "/persona/" + persona.publicId,
+                      pathname: "/persona/" + persona.id,
                     }}
                   >
                     <a>
                       <img
                         className="mb-3 ms-n3"
+                        s
                         src="assets/img/category/icon1.png"
                         width="75"
-                        alt="Feature"
+                        alt="Icon"
                       />
                     </a>
                   </Link>
-                  <h4 class="mb-3">{persona.questions[0].answer}</h4>
-                  <p class="mb-0 fw-medium text-secondary">
-                    Criado em: {persona.createdOn}
+                  <h4 className="mb-3">
+                    {persona.persona.questions[0]["Dê um nome a persona?"]}
+                  </h4>
+                  <p className="mb-0 fw-medium text-secondary">
+                    Ocupacao:{" "}
+                    {persona.persona.questions[1]["Qual o cargo que ocupa?"]}
+                  </p>
+                  <p className="mb-0 fw-medium text-secondary">
+                    Idade:{" "}
+                    {persona.persona.questions[3]["Qual a idade da persona?"]}
+                  </p>
+                  <p className="mb-0 fw-medium text-secondary">
+                    Como se identifica:{" "}
+                    {persona.persona.questions[5]["Qual o gênero da Persona?"]}
+                  </p>
+                  <p className="mb-0 fw-medium text-secondary">
+                    Moradia:{" "}
+                    {
+                      persona.persona.questions[4][
+                        "Qual a região de moradia da sua persona?"
+                      ]
+                    }
+                  </p>
+                  <p className="mb-0 fw-medium text-secondary">
+                    Escolaridade:{" "}
+                    {
+                      persona.persona.questions[6][
+                        "Qual o nível de escolaridade da persona?"
+                      ]
+                    }
+                  </p>
+                  <p className="mb-0 fw-medium text-secondary">
+                    Renda Mensal:{" "}
+                    {
+                      persona.persona.questions[9][
+                        "Qual a renda mensal da sua persona?"
+                      ]
+                    }
                   </p>
                 </div>
               ))}
@@ -71,7 +107,7 @@ export async function getServerSideProps({ query: { page = 1 } }) {
   ).then((res) => {
     return res.json();
   });
-  console.log(data.data[0]);
+  console.log(data.data[0].persona.questions);
   return {
     props: {
       data: data,

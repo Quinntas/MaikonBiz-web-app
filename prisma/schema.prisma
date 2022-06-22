@@ -23,7 +23,6 @@ model User {
   avatar      String
   role        String
   identifyAs  String
-  personas    Persona[]
   address     Address[]
 }
 
@@ -39,28 +38,4 @@ model Address {
   PostalCode String
   User       User?   @relation(fields: [userId], references: [id])
   userId     String?
-}
-
-model Persona {
-  id         Int         @id @default(autoincrement())
-  createdOn  String
-  modifiedOn String
-  author     User        @relation(fields: [authorId], references: [id])
-  authorId   String
-  questions  PersonaQA[]
-}
-
-model PersonaQuestion {
-  id        Int         @id @default(autoincrement())
-  question  String
-  PersonaQA PersonaQA[]
-}
-
-model PersonaQA {
-  id                Int             @id @default(autoincrement())
-  question          PersonaQuestion @relation(fields: [personaQuestionId], references: [id])
-  answer            String
-  Persona           Persona?        @relation(fields: [personaId], references: [id])
-  personaId         Int?
-  personaQuestionId Int
 }
