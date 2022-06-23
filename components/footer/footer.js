@@ -11,12 +11,12 @@ export default function Footer(props) {
 
   return (
     <>
-      <footer class="footer">
+      <footer className="footer">
         <div className="container">
           <div className="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="footer__about">
-                <div class="footer__logo">
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="footer__about">
+                <div className="footer__logo">
                   <a href="#">
                     <img src="" alt="" />
                   </a>
@@ -99,7 +99,7 @@ export default function Footer(props) {
                   Copyright ©
                   <script>document.write(new Date().getFullYear());</script>2022
                   Todos os direitos reservados |{" "}
-                  <i class="fa fa-heart-o" aria-hidden="true"></i>{" "}
+                  <i className="fa fa-heart-o" aria-hidden="true"></i>{" "}
                   <a href="https://maikon.biz/" target="_blank">
                     Maikon Biz
                   </a>
@@ -110,10 +110,10 @@ export default function Footer(props) {
         </div>
       </footer>
 
-      <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-          <div class="search-close-switch">+</div>
-          <form class="search-model-form">
+      <div className="search-model">
+        <div className="h-100 d-flex align-items-center justify-content-center">
+          <div className="search-close-switch">+</div>
+          <form className="search-model-form">
             <input
               type="text"
               id="search-input"

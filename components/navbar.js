@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <>
-      <header class="header">
+      <header className="header">
         <div className="header__top">
           <div className="container">
             <div className="row">
