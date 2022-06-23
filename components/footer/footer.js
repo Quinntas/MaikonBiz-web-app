@@ -14,20 +14,7 @@ export default function Footer(props) {
       <footer className="footer">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="footer__about">
-                <div className="footer__logo">
-                  <a href="#">
-                    <img src="" alt="" />
-                  </a>
-                </div>
-                <p>asoidaplsdapsdkoapskdopaoksd</p>
-                <a href="#">
-                  <img src="img/payment.png" alt="" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+            <div className="col-lg-2  col-md-3 col-sm-6">
               <div className="footer__widget">
                 <h6>PLANEJAR</h6>
                 <ul>
@@ -49,7 +36,46 @@ export default function Footer(props) {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-2 col-md-3 col-sm-6">
+            <div className="col-lg-2  col-md-3 col-sm-6">
+              <div className="footer__widget">
+                <h6>ATRAIR</h6>
+                <ul>
+                  <li>
+                    <a href="#">Anúncios Pagos</a>
+                  </li>
+                  <li>
+                    <a href="#">Produção de Conteúdo</a>
+                  </li>
+                  <li>
+                    <a href="#">SEO (Otimização para buscadores)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-2  col-md-3 col-sm-6">
+              <div className="footer__widget">
+                <h6>CONVERTER</h6>
+                <ul>
+                  <li>
+                    <a href="#">Call-to-Action</a>
+                  </li>
+                  <li>
+                    <a href="#">Formulários</a>
+                  </li>
+                  <li>
+                    <a href="#">Landing Page</a>
+                  </li>
+                  <li>
+                    <a href="#">Ofertas Indiretas</a>
+                  </li>
+                  <li>
+                    <a href="#">Otimização (A/B Tests)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-lg-2  col-sm-6">
               <div className="footer__widget">
                 <h6>POSICIONAR</h6>
                 <ul>

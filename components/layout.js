@@ -10,7 +10,6 @@ export default function Layout({ children }) {
       <Navbar />
       {children}
       <Footer />
-      <Script src="https://code.jquery.com/jquery-3.3.1.min.js" />
       <Script src="js/jquery-3.3.1.min.js" />
       <Script src="js/bootstrap.min.js" />
       <Script src="js/jquery.nice-select.min.js" />
