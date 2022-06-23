@@ -14,52 +14,65 @@ export default function Footer(props) {
       <footer class="footer">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="footer__about">
-                <div className="footer__logo">
-                  <a href="#"></a>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="footer__about">
+                <div class="footer__logo">
+                  <a href="#">
+                    <img src="" alt="" />
+                  </a>
                 </div>
-                <p>
-                  The customer is at the heart of our unique business model,
-                  which includes design.
-                </p>
-                <a href="#"></a>
+                <p>asoidaplsdapsdkoapskdopaoksd</p>
+                <a href="#">
+                  <img src="img/payment.png" alt="" />
+                </a>
               </div>
             </div>
             <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
               <div className="footer__widget">
-                <h6>Shopping</h6>
+                <h6>PLANEJAR</h6>
                 <ul>
                   <li>
-                    <a href="#">Clothing Store</a>
+                    <a href="#">Diagnóstico</a>
                   </li>
                   <li>
-                    <a href="#">Trending Shoes</a>
+                    <a href="#">Equipe de Marketing</a>
                   </li>
                   <li>
-                    <a href="#">Accessories</a>
+                    <a href="#">Investimento</a>
                   </li>
                   <li>
-                    <a href="#">Sale</a>
+                    <a href="#">Buyer Persona</a>
+                  </li>
+                  <li>
+                    <a href="#">Tecnologia</a>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-2 col-md-3 col-sm-6">
               <div className="footer__widget">
-                <h6>Shopping</h6>
+                <h6>POSICIONAR</h6>
                 <ul>
                   <li>
-                    <a href="#">Contact Us</a>
+                    <a href="#">Blog de Conteúdo</a>
                   </li>
                   <li>
-                    <a href="#">Payment Methods</a>
+                    <a href="#">Classificados</a>
                   </li>
                   <li>
-                    <a href="#">Delivary</a>
+                    <a href="#">Loja Virtual</a>
                   </li>
                   <li>
-                    <a href="#">Return Exchanges</a>
+                    <a href="#">Marketplace</a>
+                  </li>
+                  <li>
+                    <a href="#">Marca</a>
+                  </li>
+                  <li>
+                    <a href="#">Redes Sociais</a>
+                  </li>
+                  <li>
+                    <a href="#">Site</a>
                   </li>
                 </ul>
               </div>
@@ -68,12 +81,9 @@ export default function Footer(props) {
               <div className="footer__widget">
                 <h6>NewLetter</h6>
                 <div className="footer__newslatter">
-                  <p>
-                    Be the first to know about new arrivals, look books, sales
-                    promos!
-                  </p>
+                  <p>Entre para nossa lista e receba conteúdos exclusivos</p>
                   <form action="#">
-                    <input type="text" placeholder="Your email"></input>
+                    <input type="text" placeholder="Seu email"></input>
                     <button type="submit">
                       <span className="icon_mail_alt"></span>
                     </button>
@@ -87,11 +97,11 @@ export default function Footer(props) {
               <div className="footer__copyright__text">
                 <p>
                   Copyright ©
-                  <script>document.write(new Date().getFullYear());</script>2020
-                  All rights reserved | This template is made with{" "}
-                  <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
-                  <a href="https://colorlib.com" target="_blank">
-                    Colorlib
+                  <script>document.write(new Date().getFullYear());</script>2022
+                  Todos os direitos reservados |{" "}
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>{" "}
+                  <a href="https://maikon.biz/" target="_blank">
+                    Maikon Biz
                   </a>
                 </p>
               </div>
@@ -99,6 +109,19 @@ export default function Footer(props) {
           </div>
         </div>
       </footer>
+
+      <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+          <div class="search-close-switch">+</div>
+          <form class="search-model-form">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search here....."
+            />
+          </form>
+        </div>
+      </div>
     </>
   );
 }

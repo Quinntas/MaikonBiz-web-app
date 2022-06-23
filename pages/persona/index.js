@@ -27,7 +27,7 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                       <div class="card">
                         <div class="card-heading">
                           <a data-toggle="collapse" data-target="#collapseOne">
-                            Categories
+                            Categorias
                           </a>
                         </div>
                         <div
@@ -39,62 +39,10 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                             <div class="shop__sidebar__categories">
                               <ul class="nice-scroll">
                                 <li>
-                                  <a href="#">Men (20)</a>
+                                  <a href="#">Buyer (20)</a>
                                 </li>
                                 <li>
-                                  <a href="#">Women (20)</a>
-                                </li>
-                                <li>
-                                  <a href="#">Bags (20)</a>
-                                </li>
-                                <li>
-                                  <a href="#">Clothing (20)</a>
-                                </li>
-                                <li>
-                                  <a href="#">Shoes (20)</a>
-                                </li>
-                                <li>
-                                  <a href="#">Accessories (20)</a>
-                                </li>
-                                <li>
-                                  <a href="#">Kids (20)</a>
-                                </li>
-                                <li>
-                                  <a href="#">Kids (20)</a>
-                                </li>
-                                <li>
-                                  <a href="#">Kids (20)</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-heading">
-                          <a data-toggle="collapse" data-target="#collapseTwo">
-                            Branding
-                          </a>
-                        </div>
-                        <div
-                          id="collapseTwo"
-                          class="collapse show"
-                          data-parent="#accordionExample"
-                        >
-                          <div class="card-body">
-                            <div class="shop__sidebar__brand">
-                              <ul>
-                                <li>
-                                  <a href="#">Louis Vuitton</a>
-                                </li>
-                                <li>
-                                  <a href="#">Chanel</a>
-                                </li>
-                                <li>
-                                  <a href="#">Hermes</a>
-                                </li>
-                                <li>
-                                  <a href="#">Gucci</a>
+                                  <a href="#">Advogado (20)</a>
                                 </li>
                               </ul>
                             </div>
@@ -107,7 +55,7 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                             data-toggle="collapse"
                             data-target="#collapseThree"
                           >
-                            Filter Price
+                            Filtro de Preco
                           </a>
                         </div>
                         <div
@@ -143,99 +91,6 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                       </div>
                       <div class="card">
                         <div class="card-heading">
-                          <a data-toggle="collapse" data-target="#collapseFour">
-                            Size
-                          </a>
-                        </div>
-                        <div
-                          id="collapseFour"
-                          class="collapse show"
-                          data-parent="#accordionExample"
-                        >
-                          <div class="card-body">
-                            <div class="shop__sidebar__size">
-                              <label for="xs">
-                                xs
-                                <input type="radio" id="xs" />
-                              </label>
-                              <label for="sm">
-                                s
-                                <input type="radio" id="sm" />
-                              </label>
-                              <label for="md">
-                                m
-                                <input type="radio" id="md" />
-                              </label>
-                              <label for="xl">
-                                xl
-                                <input type="radio" id="xl" />
-                              </label>
-                              <label for="2xl">
-                                2xl
-                                <input type="radio" id="2xl" />
-                              </label>
-                              <label for="xxl">
-                                xxl
-                                <input type="radio" id="xxl" />
-                              </label>
-                              <label for="3xl">
-                                3xl
-                                <input type="radio" id="3xl" />
-                              </label>
-                              <label for="4xl">
-                                4xl
-                                <input type="radio" id="4xl" />
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-heading">
-                          <a data-toggle="collapse" data-target="#collapseFive">
-                            Colors
-                          </a>
-                        </div>
-                        <div
-                          id="collapseFive"
-                          class="collapse show"
-                          data-parent="#accordionExample"
-                        >
-                          <div class="card-body">
-                            <div class="shop__sidebar__color">
-                              <label class="c-1" for="sp-1">
-                                <input type="radio" id="sp-1" />
-                              </label>
-                              <label class="c-2" for="sp-2">
-                                <input type="radio" id="sp-2" />
-                              </label>
-                              <label class="c-3" for="sp-3">
-                                <input type="radio" id="sp-3" />
-                              </label>
-                              <label class="c-4" for="sp-4">
-                                <input type="radio" id="sp-4" />
-                              </label>
-                              <label class="c-5" for="sp-5">
-                                <input type="radio" id="sp-5" />
-                              </label>
-                              <label class="c-6" for="sp-6">
-                                <input type="radio" id="sp-6" />
-                              </label>
-                              <label class="c-7" for="sp-7">
-                                <input type="radio" id="sp-7" />
-                              </label>
-                              <label class="c-8" for="sp-8">
-                                <input type="radio" id="sp-8" />
-                              </label>
-                              <label class="c-9" for="sp-9">
-                                <input type="radio" id="sp-9"></input>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-heading">
                           <a data-toggle="collapse" data-target="#collapseSix">
                             Tags
                           </a>
@@ -247,13 +102,10 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                         >
                           <div class="card-body">
                             <div class="shop__sidebar__tags">
-                              <a href="#">Product</a>
-                              <a href="#">Bags</a>
-                              <a href="#">Shoes</a>
-                              <a href="#">Fashio</a>
-                              <a href="#">Clothing</a>
-                              <a href="#">Hats</a>
-                              <a href="#">Accessories</a>
+                              <a href="#">Idoso</a>
+                              <a href="#">LGBTQIA+</a>
+                              <a href="#">Jovem</a>
+                              <a href="#">Crianca</a>
                             </div>
                           </div>
                         </div>
@@ -267,14 +119,15 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                       <div class="shop__product__option__left">
-                        <p>Showing 1–12 of 126 results</p>
+                        <p>Mostrando 1-20 de 120 resultados</p>
                       </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                       <div class="shop__product__option__right">
-                        <p>Sort by Price:</p>
+                        <p>Filtre por preco: </p>
                         <select>
-                          <option value="">Low To High</option>
+                          <option value="">Descendente</option>
+                          <option value="">Ascendente</option>
                           <option value="">$0 - $55</option>
                           <option value="">$55 - $100</option>
                         </select>
@@ -285,19 +138,10 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                 <div class="row">
                   <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="product__item">
-                      <div
-                        class="product__item__pic set-bg"
-                        data-setbg="img/product/product-2.jpg"
-                      >
+                      <div class="product__item__pic set-bg" data-setbg="">
                         <ul class="product__hover">
                           <li>
                             <a href="#"></a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              {" "}
-                              <span>Compare</span>
-                            </a>
                           </li>
                           <li>
                             <a href="#"></a>
@@ -305,9 +149,9 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                         </ul>
                       </div>
                       <div class="product__item__text">
-                        <h6>Piqué Biker Jacket</h6>
+                        <h6>Buyer Persona</h6>
                         <a href="#" class="add-cart">
-                          + Add To Cart
+                          + Adcionar ao carrinho
                         </a>
                         <div class="rating">
                           <i class="fa fa-star-o"></i>
@@ -316,7 +160,7 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                           <i class="fa fa-star-o"></i>
                           <i class="fa fa-star-o"></i>
                         </div>
-                        <h5>$67.24</h5>
+                        <h5>R$67.24</h5>
                         <div class="product__color__select">
                           <label for="pc-4">
                             <input type="radio" id="pc-4"></input>
@@ -331,6 +175,111 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                       </div>
                     </div>
                   </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item sale">
+                      <div
+                        class="product__item__pic set-bg"
+                        data-setbg="img/product/product-3.jpg"
+                      >
+                        <span class="label">Sale</span>
+                        <ul class="product__hover">
+                          <li>
+                            <a href="#">
+                              <img src="img/icon/heart.png" alt="" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <img src="img/icon/compare.png" alt="" />{" "}
+                              <span>Compare</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <img src="img/icon/search.png" alt="" />
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="product__item__text">
+                        <h6>Multi-pocket Chest Bag</h6>
+                        <a href="#" class="add-cart">
+                          + Add To Cart
+                        </a>
+                        <div class="rating">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                        <h5>$43.48</h5>
+                        <div class="product__color__select">
+                          <label for="pc-7">
+                            <input type="radio" id="pc-7" />
+                          </label>
+                          <label class="active black" for="pc-8">
+                            <input type="radio" id="pc-8" />
+                          </label>
+                          <label class="grey" for="pc-9">
+                            <input type="radio" id="pc-9" />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="product__item">
+                      <div
+                        class="product__item__pic set-bg"
+                        data-setbg="img/product/product-4.jpg"
+                      >
+                        <ul class="product__hover">
+                          <li>
+                            <a href="#">
+                              <img src="img/icon/heart.png" alt="" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <img src="img/icon/compare.png" alt="" />{" "}
+                              <span>Compare</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <img src="img/icon/search.png" alt="" />
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="product__item__text">
+                        <h6>Diagonal Textured Cap</h6>
+                        <a href="#" class="add-cart">
+                          + Add To Cart
+                        </a>
+                        <div class="rating">
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                        <h5>$60.9</h5>
+                        <div class="product__color__select">
+                          <label for="pc-10">
+                            <input type="radio" id="pc-10" />
+                          </label>
+                          <label class="active black" for="pc-11">
+                            <input type="radio" id="pc-11" />
+                          </label>
+                          <label class="grey" for="pc-12">
+                            <input type="radio" id="pc-12" />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="product__pagination">
@@ -340,7 +289,7 @@ function PersonaPage({ data, page, numberOfPersonas, pageLimit }) {
                         <a href="#">2</a>
                         <a href="#">3</a>
                         <span>...</span>
-                        <a href="#">21</a>
+                        <a href="#">6</a>
                       </div>
                     </div>
                   </div>
