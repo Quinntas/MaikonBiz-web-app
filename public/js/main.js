@@ -1,14 +1,4 @@
-/*  ---------------------------------------------------
-    Template Name: Male Fashion
-    Description: Male Fashion - ecommerce teplate
-    Author: Colorib
-    Author URI: https://www.colorib.com/
-    Version: 1.0
-    Created: Colorib
----------------------------------------------------------  */
-
 "use strict";
-
 (function ($) {
   /*------------------
         Preloader
@@ -52,10 +42,6 @@
   /*------------------
 		Navigation
 	--------------------*/
-  $(".mobile-menu").slicknav({
-    prependTo: "#mobile-menu-wrap",
-    allowParentLinks: true,
-  });
 
   /*------------------
         Accordin Active
@@ -149,7 +135,7 @@
 
   // Uncomment below and use your date //
 
-  /* var timerdate = "2020/12/30" */
+  var timerdate = "2022/06/30";
 
   $("#countdown").countdown(timerdate, function (event) {
     $(this).html(

@@ -1,7 +1,7 @@
 import cookie from "cookie";
 const jwt = require("jsonwebtoken");
 import { prismaClient } from "/prisma/prismaClient";
-import { verifyEncryptedValue } from "../../utils/encryption";
+import { verifyEncryptedValue, encryptValue } from "../../utils/encryption";
 
 export default async (req, res) => {
   if (req.method != "POST") {
@@ -22,13 +22,12 @@ export default async (req, res) => {
     if (!verifyEncryptedValue(req.body.password, user.password))
       return res.status(401).json({ sucess: false });
 
-    const token = jwt.sign(
-      { email: req.body.publicId },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: "1h",
-      }
-    );
+    delete user.id;
+    delete user.password;
+
+    const token = jwt.sign({ user: user }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
 
     res.setHeader(
       "Set-Cookie",
@@ -40,9 +39,6 @@ export default async (req, res) => {
         path: "/",
       })
     );
-
-    delete user.id;
-    delete user.password;
 
     return res.status(200).json({ user: user, token: token });
   }

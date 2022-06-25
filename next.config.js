@@ -7,6 +7,6 @@ module.exports = nextConfig;
 
 module.exports = {
   images: {
-    domains: ["maikon.biz"],
+    domains: ["maikon.biz", "i.pravatar.cc"],
   },
 };

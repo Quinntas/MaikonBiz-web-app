@@ -1,16 +1,18 @@
 import { verifyToken, logout } from "/utils/requests";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Layout from "../components/layout";
+import Image from "next/image";
+import Link from "next/link";
 
 function HomePage(props) {
-  const router = useRouter();
+  const [token, setToken] = useState("");
 
   useEffect(() => {
     const checkToken = async () => {
       if (props.token != "") {
         const res = await verifyToken(props.token);
-        if (res) {
+        if (res.ok) {
+          setToken(await res.json());
         } else {
           logout();
         }
@@ -21,178 +23,196 @@ function HomePage(props) {
   }, []);
 
   return (
-    <Layout>
-      <section className="hero">
-        <div className="hero__slider owl-carousel">
-          <div className="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-5 col-lg-7 col-md-8">
-                  <div className="hero__text">
-                    <h6>Summer Collection</h6>
-                    <h2>Buyer Persona - 2022</h2>
-                    <p>Para buyer personas</p>
-                    <a href="#" className="primary-btn">
-                      Comprar Agora <span className="arrow_right"></span>
-                    </a>
-                    <div className="hero__social">
-                      <a href="#">
-                        <i className="fa fa-facebook"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-twitter"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-pinterest"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-instagram"></i>
-                      </a>
+    <>
+      <Layout token={token} title={"Maikon Biz"} pathname="/">
+        <section className="hero">
+          <div className="hero__slider owl-carousel">
+            <div
+              className="hero__items set-bg"
+              data-setbg="/img/hero/hero-1.jpg"
+            >
+              <div className="container">
+                <div className="row">
+                  <div className="col-xl-5 col-lg-7 col-md-8">
+                    <div className="hero__text">
+                      <h6>Summer Collection</h6>
+                      <h2>Buyer Persona - 2022</h2>
+                      <p>Para buyer personas</p>
+                      <Link href="#">
+                        <a className="primary-btn">
+                          Comprar Agora <span className="arrow_right"></span>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="hero__items set-bg"
+              data-setbg="/img/hero/hero-2.jpg"
+            >
+              <div className="container">
+                <div className="row">
+                  <div className="col-xl-5 col-lg-7 col-md-8">
+                    <div className="hero__text">
+                      <h6>Summer Collection</h6>
+                      <h2>Perona Advogado - 2022</h2>
+                      <p>Para advogados</p>
+                      <Link href="#">
+                        <a className="primary-btn">
+                          Comprar Agora <span className="arrow_right"></span>
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="hero__items set-bg" data-setbg="img/hero/hero-2.jpg">
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-5 col-lg-7 col-md-8">
-                  <div className="hero__text">
-                    <h6>Summer Collection</h6>
-                    <h2>Perona Advogado - 2022</h2>
-                    <p>Para advogados</p>
-                    <a href="#" className="primary-btn">
-                      Comprar Agora <span className="arrow_right"></span>
-                    </a>
-                    <div className="hero__social">
-                      <a href="#">
-                        <i className="fa fa-facebook"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-twitter"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-pinterest"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-instagram"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="product spad">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <ul className="filter__controls">
-                <li className="active" data-filter="*">
-                  Best Sellers
-                </li>
-                <li data-filter=".new-arrivals">Novas Personas</li>
-                <li data-filter=".hot-sales">Hot Sales</li>
-              </ul>
+        <section className="product spad">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <ul className="filter__controls">
+                  <li className="active" data-filter="*">
+                    Best Sellers
+                  </li>
+                  <li data-filter=".new-arrivals">Novas Personas</li>
+                  <li data-filter=".hot-sales">Hot Sales</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="row product__filter">
-            <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-              <div className="product__item">
-                <div className="product__item__pic set-bg" data-setbg="">
-                  <span className="label">Novo</span>
-                  <ul className="product__hover">
-                    <li>
-                      <a href="#">
-                        <img src="img/icon/heart.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="img/icon/search.png" alt="" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="product__item__text">
-                  <h6>Buyer Persona</h6>
-                  <a href="#" className="add-cart">
-                    + Adcionar ao Carrinho
-                  </a>
-                  <div className="rating">
-                    <i className="fa fa-star-o"></i>
-                    <i className="fa fa-star-o"></i>
-                    <i className="fa fa-star-o"></i>
-                    <i className="fa fa-star-o"></i>
-                    <i className="fa fa-star-o"></i>
+            <div className="row product__filter">
+              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                <div className="product__item">
+                  <div className="product__item__pic set-bg">
+                    <Image
+                      src="https://i.pravatar.cc/300?img=49"
+                      layout="fill"
+                    ></Image>
+                    <span className="label">Novo</span>
+                    <ul className="product__hover">
+                      <li>
+                        <Link href="#">
+                          <a>
+                            <img src="img/icon/heart.png" alt="" />
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#">
+                          <a>
+                            <img src="img/icon/search.png" alt="" />
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
-                  <h5>R$33.00</h5>
-                  <div className="product__color__select">
-                    <label htmlFor="pc-1">
-                      <input type="radio" id="pc-1" />
-                    </label>
-                    <label className="active black" htmlFor="pc-2">
-                      <input type="radio" id="pc-2" />
-                    </label>
-                    <label className="grey" htmlFor="pc-3">
-                      <input type="radio" id="pc-3" />
-                    </label>
+                  <div className="product__item__text">
+                    <h6>Buyer Persona</h6>
+                    <Link href="#">
+                      <a className="add-cart">+ Adcionar ao Carrinho</a>
+                    </Link>
+                    <h5>R$33.00</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-              <div className="product__item sale">
-                <div className="product__item__pic set-bg" data-setbg="">
-                  <span className="label">Sale</span>
-                  <ul className="product__hover">
-                    <li>
-                      <a href="#">
-                        <img src="img/icon/heart.png" alt="" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="img/icon/search.png" alt="" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="product__item__text">
-                  <h6>Advogado Persona</h6>
-                  <a href="#" className="add-cart">
-                    + Adcionar ao Carrinho
-                  </a>
-                  <div className="rating">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star-o"></i>
+              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+                <div className="product__item sale">
+                  <div className="product__item__pic set-bg">
+                    <Image
+                      src="https://i.pravatar.cc/300?img=50"
+                      layout="fill"
+                    ></Image>
+                    <span className="label">Sale</span>
+                    <ul className="product__hover">
+                      <li>
+                        <Link href="#">
+                          <a>
+                            <img src="img/icon/heart.png" alt="" />
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#">
+                          <a>
+                            <img src="img/icon/search.png" alt="" />
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
-                  <h5>R$43.48</h5>
-                  <div className="product__color__select">
-                    <label htmlFor="pc-7">
-                      <input type="radio" id="pc-7" />
-                    </label>
-                    <label className="active black" htmlFor="pc-8">
-                      <input type="radio" id="pc-8" />
-                    </label>
-                    <label className="grey" htmlFor="pc-9">
-                      <input type="radio" id="pc-9" />
-                    </label>
+                  <div className="product__item__text">
+                    <h6>Advogado Persona</h6>
+                    <Link href="#">
+                      <a className="add-cart">+ Adcionar ao Carrinho</a>
+                    </Link>
+                    <h5>R$43.48</h5>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </Layout>
+        </section>
+
+        <section className="categories spad">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3">
+                <div className="categories__text">
+                  <h2>
+                    Nova Colecao <br /> <span>Promocao </span> <br />
+                    Novo
+                  </h2>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="categories__hot__deal">
+                  <img src="https://i.pravatar.cc/300?img=23" alt="" />
+                  <div className="hot__deal__sticker">
+                    <span>Apenas</span>
+                    <h5>R$29.99</h5>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 offset-lg-1">
+                <div className="categories__deal__countdown">
+                  <span>Promocao da semana</span>
+                  <h2>Ana - Buyer Persona</h2>
+                  <div
+                    className="categories__deal__countdown__timer"
+                    id="countdown"
+                  >
+                    <div className="cd-item">
+                      <span>3</span>
+                      <p>Dias</p>
+                    </div>
+                    <div className="cd-item">
+                      <span>1</span>
+                      <p>Horas</p>
+                    </div>
+                    <div className="cd-item">
+                      <span>50</span>
+                      <p>Minutos</p>
+                    </div>
+                    <div className="cd-item">
+                      <span>18</span>
+                      <p>Segundos</p>
+                    </div>
+                  </div>
+                  <a href="#" className="primary-btn">
+                    Comprar agora
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Layout>
+    </>
   );
 }
 

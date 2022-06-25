@@ -1,7 +1,9 @@
-import { Fragment, useState, useRef, useCallback } from "react";
+import { Fragment, useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Layout from "../../components/layout";
 import { useRouter } from "next/router";
+import { verifyToken, logout } from "/utils/requests";
+import Image from "next/image";
 
 function PersonaPage({
   data,
@@ -12,6 +14,7 @@ function PersonaPage({
   categories,
   tags,
   prices,
+  bToken,
 }) {
   const router = useRouter();
   const searchRef = useRef(null);
@@ -19,9 +22,11 @@ function PersonaPage({
   const [active, setActive] = useState(false);
   const [results, setResults] = useState([]);
   const [items, setItems] = useState([]);
+  const [token, setToken] = useState("");
 
   const onChange = useCallback((event) => {
     const query = event.target.value;
+
     setQuery(query);
     if (query.length) {
       fetch("api/persona?search=" + query)
@@ -46,8 +51,23 @@ function PersonaPage({
     }
   }, []);
 
+  useEffect(() => {
+    const checkToken = async () => {
+      if (bToken != "") {
+        const res = await verifyToken(bToken);
+        if (res.ok) {
+          setToken(await res.json());
+        } else {
+          logout();
+        }
+      }
+    };
+
+    checkToken();
+  }, []);
+
   return (
-    <Layout>
+    <Layout title="Maikon Biz" token={token} pathname="/persona">
       <Fragment>
         <section className="shop spad">
           <div className="container " ref={searchRef}>
@@ -86,7 +106,14 @@ function PersonaPage({
                               <ul className="nice-scroll">
                                 {categories.map((category) => (
                                   <li>
-                                    <Link href="#">
+                                    <Link
+                                      href={
+                                        "/persona?page=" +
+                                        page +
+                                        "&category=" +
+                                        category
+                                      }
+                                    >
                                       <a>{category}</a>
                                     </Link>
                                   </li>
@@ -152,10 +179,8 @@ function PersonaPage({
                       key={persona.id}
                     >
                       <div className="product__item">
-                        <div
-                          className="product__item__pic set-bg"
-                          data-setbg={persona.avatar}
-                        >
+                        <div className="product__item__pic set-bg">
+                          <Image alt="" src={persona.avatar} layout="fill" />
                           <ul className="product__hover">
                             <li>
                               <a href="#"></a>
@@ -171,13 +196,6 @@ function PersonaPage({
                           <a href="#" className="add-cart">
                             + Adcionar ao carrinho
                           </a>
-                          <div className="rating">
-                            <i className="fa fa-star-o"></i>
-                            <i className="fa fa-star-o"></i>
-                            <i className="fa fa-star-o"></i>
-                            <i className="fa fa-star-o"></i>
-                            <i className="fa fa-star-o"></i>
-                          </div>
                           <h5>R${persona.price}</h5>
                         </div>
                       </div>
@@ -214,7 +232,7 @@ function PersonaPage({
   );
 }
 
-export async function getServerSideProps({ query: { page = 1 } }) {
+export async function getServerSideProps({ req, query: { page = 1 } }) {
   const pageLimit = 20;
 
   const data = await fetch(
@@ -227,8 +245,6 @@ export async function getServerSideProps({ query: { page = 1 } }) {
   ).then((res) => {
     return res.json();
   });
-
-  console.log(data.tags);
 
   const maxPages = Math.ceil(data.meta.length / pageLimit);
   const currentPage = parseInt(page);
@@ -262,6 +278,7 @@ export async function getServerSideProps({ query: { page = 1 } }) {
       categories: data.categories,
       tags: data.tags,
       prices: data.prices,
+      bToken: req.cookies.token || "",
     },
   };
 }

@@ -1,7 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 
-export default function Navbar() {
+function Navbar(props) {
   return (
     <>
       <header className="header">
@@ -16,7 +15,34 @@ export default function Navbar() {
               <div className="col-lg-6 col-md-5">
                 <div className="header__top__right">
                   <div className="header__top__links">
-                    <a href="#">Logar</a>
+                    {(() => {
+                      if (props.token[0] == "") {
+                        return (
+                          <>
+                            <Link href="/auth/register">
+                              <a>REGISTRAR</a>
+                            </Link>
+                            <Link href="/auth/login">
+                              <a>JA TEM UMA CONTA ?</a>
+                            </Link>
+                          </>
+                        );
+                      } else {
+                        return (
+                          <>
+                            <Link
+                              href={"/user/" + props.token[0].user.nickName}
+                            >
+                              <a style={{ textDecoration: "none" }}>
+                                {props.token[0].user.nickName}
+                              </a>
+                            </Link>
+                            ;
+                          </>
+                        );
+                      }
+                    })()}
+
                     <a href="#">FAQs</a>
                   </div>
                 </div>
@@ -28,40 +54,48 @@ export default function Navbar() {
           <div className="row">
             <div className="col-lg-3 col-md-3">
               <div className="header__logo">
-                <a href="./index.html"></a>
+                <a href="/"></a>
               </div>
             </div>
             <div className="col-lg-6 col-md-6">
               <nav className="header__menu mobile-menu">
                 <ul>
-                  <li className="active">
-                    <a href="./index.html">Home</a>
+                  <li className={props.currentPath == "/" ? "active" : ""}>
+                    <Link href="/">
+                      <a>Home</a>
+                    </Link>
                   </li>
-                  <li>
-                    <a href="persona">Persona Shop</a>
+                  <li
+                    className={props.currentPath == "/persona" ? "active" : ""}
+                  >
+                    <Link href="persona">
+                      <a>Persona Shop</a>
+                    </Link>
                   </li>
-                  <li>
+                  <li className={props.currentPath == "/about" ? "active" : ""}>
                     <a href="#">Paginas</a>
                     <ul className="dropdown">
                       <li>
-                        <a href="./about.html">Criar Persona</a>
+                        <Link href="https://maikon.biz/gerador-de-personas/">
+                          <a>Criar Persona</a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="./shop-details.html">Sobre</a>
-                      </li>
-                      <li>
-                        <a href="./shopping-cart.html">Carrinho</a>
-                      </li>
-                      <li>
-                        <a href="./blog-details.html">Blog Details</a>
+                        <Link href="/about">
+                          <a>Sobre</a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="./blog.html">Blog</a>
+                    <Link href="https://maikon.biz/blog/">
+                      <a>Blog</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="./contact.html">Contato</a>
+                    <Link href="https://maikon.biz/contato/">
+                      <a>Contato</a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -89,3 +123,5 @@ export default function Navbar() {
     </>
   );
 }
+
+export default Navbar;

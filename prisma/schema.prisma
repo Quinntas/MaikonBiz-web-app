@@ -19,7 +19,7 @@ model User {
   email       String    @unique
   password    String
   fullName    String
-  nickName    String
+  nickName    String    @unique
   avatar      String
   role        String
   identifyAs  String

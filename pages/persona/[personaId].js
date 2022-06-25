@@ -1,8 +1,27 @@
+import { verifyToken, logout } from "/utils/requests";
+import { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 
-function PersonaIdPage({ persona }) {
+function PersonaIdPage({ bToken, persona }) {
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    const checkToken = async () => {
+      if (bToken != "") {
+        const res = await verifyToken(bToken);
+        if (res.ok) {
+          setToken(await res.json());
+        } else {
+          logout();
+        }
+      }
+    };
+
+    checkToken();
+  }, []);
+
   return (
-    <Layout>
+    <Layout title="Maikon Biz" token={token}>
       <section className="shop-details">
         <div className="product__details__pic">
           <div className="container">
@@ -22,6 +41,7 @@ function PersonaIdPage({ persona }) {
             <div className="row d-flex justify-content-center">
               <div className="col-lg-8">
                 <div className="product__details__text">
+                  <h3>{persona.data.questions["QUESTION_1"]}</h3>
                   <h4>{persona.data.title}</h4>
                   <h3>
                     R${persona.data.price} <span>70.00</span>
@@ -75,16 +95,6 @@ function PersonaIdPage({ persona }) {
                     Descricao
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link"
-                    data-toggle="tab"
-                    href="#tabs-7"
-                    role="tab"
-                  >
-                    Informacao Adcional
-                  </a>
-                </li>
               </ul>
               <div className="tab-content">
                 <div className="tab-pane active" id="tabs-5" role="tabpanel">
@@ -132,52 +142,39 @@ function PersonaIdPage({ persona }) {
                         os objetivos de venda.
                       </p>
                     </div>
-                  </div>
-                </div>
-                <div className="tab-pane" id="tabs-7" role="tabpanel">
-                  <div className="product__details__tab__content">
-                    <p className="note">
-                      Nam tempus turpis at metus scelerisque placerat nulla
-                      deumantos solicitud felis. Pellentesque diam dolor,
-                      elementum etos lobortis des mollis ut risus. Sedcus
-                      faucibus an sullamcorper mattis drostique des commodo
-                      pharetras loremos.
-                    </p>
                     <div className="product__details__tab__content__item">
-                      <h5>Products Infomation</h5>
+                      <h5>Informacoes Pessoais</h5>
                       <p>
-                        A Pocket PC is a handheld computer, which features many
-                        of the same capabilities as a modern PC. These handy
-                        little devices allow individuals to retrieve and store
-                        e-mail messages, create a contact file, coordinate
-                        appointments, surf the internet, exchange text messages
-                        and more. Every product that is labeled as a Pocket PC
-                        must be accompanied with specific software to operate
-                        the unit and must feature a touchscreen and touchpad.
+                        Idade:{" "}
+                        <span>{persona.data.questions["QUESTION_4"]}</span>
                       </p>
                       <p>
-                        As is the case with any new technology product, the cost
-                        of a Pocket PC was substantial during it’s early
-                        release. For approximately $700.00, consumers could
-                        purchase one of top-of-the-line Pocket PCs in 2003.
-                        These days, customers are finding that prices have
-                        become much more reasonable now that the newness is
-                        wearing off. For approximately $350.00, a new Pocket PC
-                        can now be purchased.
+                        Cargo:{" "}
+                        <span>{persona.data.questions["QUESTION_2"]}</span>
                       </p>
-                    </div>
-                    <div className="product__details__tab__content__item">
-                      <h5>Material used</h5>
                       <p>
-                        Polyester is deemed lower quality due to its none
-                        natural quality’s. Made from synthetic materials, not
-                        natural like wool. Polyester suits become creased easily
-                        and are known for not being breathable. Polyester suits
-                        tend to have a shine to them compared to wool and cotton
-                        suits, this can make the suit look cheap. The texture of
-                        velvet is luxurious and breathable. Velvet is a great
-                        choice for dinner party jacket and can be worn all year
-                        round.
+                        Ramo:{" "}
+                        <span>{persona.data.questions["QUESTION_3"]}</span>
+                      </p>
+                      <p>
+                        Genero:{" "}
+                        <span>{persona.data.questions["QUESTION_6"]}</span>
+                      </p>
+                      <p>
+                        Morada:{" "}
+                        <span>{persona.data.questions["QUESTION_5"]}</span>
+                      </p>
+                      <p>
+                        Escolaridade:{" "}
+                        <span>{persona.data.questions["QUESTION_7"]}</span>
+                      </p>
+                      <p>
+                        Forma de Falar:{" "}
+                        <span>{persona.data.questions["QUESTION_11"]}</span>
+                      </p>
+                      <p>
+                        Renda:{" R$"}
+                        <span>{persona.data.questions["QUESTION_10"]}</span>
                       </p>
                     </div>
                   </div>
@@ -188,22 +185,22 @@ function PersonaIdPage({ persona }) {
         </div>
       </section>
 
-      <section class="related spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <h3 class="related-title">Produtos Parecidos</h3>
+      <section className="related spad">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h3 className="related-title">Produtos Parecidos</h3>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-              <div class="product__item">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-sm-6 col-sm-6">
+              <div className="product__item">
                 <div
-                  class="product__item__pic set-bg"
+                  className="product__item__pic set-bg"
                   data-setbg="img/product/product-1.jpg"
                 >
-                  <span class="label">Novo</span>
-                  <ul class="product__hover">
+                  <span className="label">Novo</span>
+                  <ul className="product__hover">
                     <li>
                       <a href="#">
                         <img src="img/icon/heart.png" alt="" />
@@ -216,9 +213,9 @@ function PersonaIdPage({ persona }) {
                     </li>
                   </ul>
                 </div>
-                <div class="product__item__text">
+                <div className="product__item__text">
                   <h6>Buyer Persona</h6>
-                  <a href="#" class="add-cart">
+                  <a href="#" className="add-cart">
                     + Adcionar ao Carrinho
                   </a>
                   <h5>R$67.24</h5>
@@ -238,7 +235,7 @@ export async function getServerSideProps(context) {
   ).then((res) => {
     return res.json();
   });
-  return { props: { persona: data } };
+  return { props: { bToken: context.req.cookies.token || "", persona: data } };
 }
 
 export default PersonaIdPage;
