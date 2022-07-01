@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function Navbar(props) {
   return (
@@ -42,8 +43,9 @@ function Navbar(props) {
                         );
                       }
                     })()}
-
-                    <a href="#">FAQs</a>
+                    <Link href="https://maikon.biz/politica-de-privacidade/">
+                      <a>FAQs</a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -54,7 +56,16 @@ function Navbar(props) {
           <div className="row">
             <div className="col-lg-3 col-md-3">
               <div className="header__logo">
-                <a href="/"></a>
+                <Link href="/">
+                  <a>
+                    <Image
+                      src="https://maikon.biz/wp-content/uploads/2017/02/MAIKON.biz-logomarca-site.png"
+                      alt=""
+                      width="100"
+                      height="40"
+                    />
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-6">
@@ -73,11 +84,13 @@ function Navbar(props) {
                     </Link>
                   </li>
                   <li className={props.currentPath == "/about" ? "active" : ""}>
-                    <a href="#">Paginas</a>
+                    <Link href="#">
+                      <a>Paginas</a>
+                    </Link>
                     <ul className="dropdown">
                       <li>
                         <Link href="https://maikon.biz/gerador-de-personas/">
-                          <a>Criar Persona</a>
+                          <a>Gerador de Personas 2.0</a>
                         </Link>
                       </li>
                       <li>
@@ -92,6 +105,7 @@ function Navbar(props) {
                       <a>Blog</a>
                     </Link>
                   </li>
+
                   <li>
                     <Link href="https://maikon.biz/contato/">
                       <a>Contato</a>
@@ -102,15 +116,22 @@ function Navbar(props) {
             </div>
             <div className="col-lg-3 col-md-3">
               <div className="header__nav__option">
-                <a href="#" className="search-switch">
-                  <img src="/img/icon/search.png" alt="" />
-                </a>
-                <a href="#">
-                  <img src="/img/icon/heart.png" alt="" />
-                </a>
-                <a href="#">
-                  <img src="/img/icon/cart.png" alt="" /> <span>0</span>
-                </a>
+                <Link href="#">
+                  <a className="search-switch">
+                    <img src="/img/icon/search.png" alt="" />
+                  </a>
+                </Link>
+                <Link href="#">
+                  <a>
+                    <img src="/img/icon/heart.png" alt="" />
+                  </a>
+                </Link>
+
+                <Link href="#">
+                  <a>
+                    <img src="/img/icon/cart.png" alt="" /> <span>0</span>
+                  </a>
+                </Link>
                 <div className="price">$0.00</div>
               </div>
             </div>

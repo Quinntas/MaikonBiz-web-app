@@ -1,6 +1,7 @@
 import Layout from "../components/layout";
 import { verifyToken, logout } from "/utils/requests";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function AboutPage({ bToken }) {
   const [token, setToken] = useState("");
@@ -17,6 +18,8 @@ function AboutPage({ bToken }) {
       }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     checkToken();
   }, []);
 
@@ -27,9 +30,11 @@ function AboutPage({ bToken }) {
           <div className="row">
             <div className="col-lg-12">
               <div className="about__pic">
-                <img
+                <Image
                   src="https://maikon.biz/wp-content/uploads/2021/07/Consultor-Maikon-Richardson-maikonbiz-1280x720.jpg"
                   alt=""
+                  width="698"
+                  height="393"
                 />
               </div>
             </div>
@@ -81,7 +86,12 @@ function AboutPage({ bToken }) {
                 </p>
                 <div className="testimonial__author">
                   <div className="testimonial__author__pic">
-                    <img src="img/about/testimonial-author.jpg" alt="" />
+                    <Image
+                      src="/img/about/testimonial-author.jpg"
+                      alt=""
+                      height="50"
+                      width="50"
+                    />
                   </div>
                   <div className="testimonial__author__text">
                     <h5>Maikon Richardson</h5>
@@ -164,42 +174,82 @@ function AboutPage({ bToken }) {
           <div className="row">
             <div className="col-lg-3 col-md-4 col-sm-4 col-6">
               <a href="#" className="client__item">
-                <img src="img/clients/client-1.png" alt="" />
+                <Image
+                  src="/img/clients/client-1.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                />
               </a>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-4 col-6">
               <a href="#" className="client__item">
-                <img src="img/clients/client-2.png" alt="" />
+                <Image
+                  src="/img/clients/client-2.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                />
               </a>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-4 col-6">
               <a href="#" className="client__item">
-                <img src="img/clients/client-3.png" alt="" />
+                <Image
+                  src="/img/clients/client-3.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                />
               </a>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-4 col-6">
               <a href="#" className="client__item">
-                <img src="img/clients/client-4.png" alt="" />
+                <Image
+                  src="/img/clients/client-4.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                />
               </a>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-4 col-6">
               <a href="#" className="client__item">
-                <img src="img/clients/client-5.png" alt="" />
+                <Image
+                  src="/img/clients/client-5.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                />
               </a>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-4 col-6">
               <a href="#" className="client__item">
-                <img src="img/clients/client-6.png" alt="" />
+                <Image
+                  src="/img/clients/client-6.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                />
               </a>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-4 col-6">
               <a href="#" className="client__item">
-                <img src="img/clients/client-7.png" alt="" />
+                <Image
+                  src="/img/clients/client-7.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                />
               </a>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-4 col-6">
               <a href="#" className="client__item">
-                <img src="img/clients/client-8.png" alt="" />
+                <Image
+                  src="/img/clients/client-8.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                />
               </a>
             </div>
           </div>

@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { verifyToken, logout, login } from "/utils/requests";
 import Link from "next/link";
+import Image from "next/image";
 
 function LoginPage(props) {
   const router = useRouter();
@@ -25,6 +26,7 @@ function LoginPage(props) {
       }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     checkToken();
   }, []);
 
@@ -39,10 +41,12 @@ function LoginPage(props) {
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-md-9 col-lg-6 col-xl-5">
-              <img
+              <Image
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                 className="img-fluid"
                 alt="Sample image"
+                height="534"
+                width="800"
               />
             </div>
             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">

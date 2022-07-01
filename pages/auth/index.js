@@ -20,6 +20,7 @@ function AuthPage(props) {
       }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     checkToken();
   }, []);
 }

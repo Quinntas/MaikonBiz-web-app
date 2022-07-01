@@ -17,6 +17,7 @@ function PersonaIdPage({ bToken, persona }) {
       }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     checkToken();
   }, []);
 

@@ -1,7 +1,6 @@
 import { Fragment, useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Layout from "../../components/layout";
-import { useRouter } from "next/router";
 import { verifyToken, logout } from "/utils/requests";
 import Image from "next/image";
 
@@ -16,12 +15,10 @@ function PersonaPage({
   prices,
   bToken,
 }) {
-  const router = useRouter();
   const searchRef = useRef(null);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(false);
   const [results, setResults] = useState([]);
-  const [items, setItems] = useState([]);
   const [token, setToken] = useState("");
 
   const onChange = useCallback((event) => {
@@ -63,6 +60,7 @@ function PersonaPage({
       }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     checkToken();
   }, []);
 
@@ -105,7 +103,7 @@ function PersonaPage({
                             <div className="shop__sidebar__categories">
                               <ul className="nice-scroll">
                                 {categories.map((category) => (
-                                  <li>
+                                  <li key={category}>
                                     <Link
                                       href={
                                         "/persona?page=" +
@@ -137,7 +135,7 @@ function PersonaPage({
                           <div className="card-body">
                             <div className="shop__sidebar__tags">
                               {tags.map((tag) => (
-                                <Link href="#">
+                                <Link href="#" key={tag}>
                                   <a>{tag}</a>
                                 </Link>
                               ))}
@@ -183,10 +181,18 @@ function PersonaPage({
                           <Image alt="" src={persona.avatar} layout="fill" />
                           <ul className="product__hover">
                             <li>
-                              <a href="#"></a>
+                              <Link href="#">
+                                <a>
+                                  <img src="img/icon/heart.png" alt="" />
+                                </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="#"></a>
+                              <Link href={"/persona/" + persona.id}>
+                                <a>
+                                  <img src="img/icon/search.png" alt="" />
+                                </a>
+                              </Link>
                             </li>
                           </ul>
                         </div>
@@ -206,7 +212,10 @@ function PersonaPage({
                     <div className="col-lg-12">
                       <div className="product__pagination">
                         {pages.map((pageNumber) => (
-                          <Link href={"/persona?page=" + pageNumber}>
+                          <Link
+                            href={"/persona?page=" + pageNumber}
+                            key={pageNumber}
+                          >
                             <a
                               className={(() => {
                                 if (parseInt(page) == pageNumber) {

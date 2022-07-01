@@ -19,6 +19,7 @@ function HomePage(props) {
       }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     checkToken();
   }, []);
 
@@ -125,6 +126,7 @@ function HomePage(props) {
                   <div className="product__item__pic set-bg">
                     <Image
                       src="https://i.pravatar.cc/300?img=50"
+                      alt=""
                       layout="fill"
                     ></Image>
                     <span className="label">Sale</span>

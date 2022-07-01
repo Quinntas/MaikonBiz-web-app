@@ -109,7 +109,12 @@ export default function Footer(props) {
                 <div className="footer__newslatter">
                   <p>Entre para nossa lista e receba conteúdos exclusivos</p>
                   <form action="#">
-                    <input type="text" placeholder="Seu email"></input>
+                    <input
+                      type="email"
+                      name="email"
+                      required="true"
+                      placeholder="Seu email"
+                    ></input>
                     <button type="submit">
                       <span className="icon_mail_alt"></span>
                     </button>
@@ -121,7 +126,7 @@ export default function Footer(props) {
           <div className="row">
             <div className="col-lg-12 text-center">
               <div className="footer__copyright__text">
-                <p>
+                <p rel="noopener noreferrer">
                   Copyright ©
                   <script>document.write(new Date().getFullYear());</script>2022
                   Todos os direitos reservados |{" "}
@@ -143,7 +148,7 @@ export default function Footer(props) {
             <input
               type="text"
               id="search-input"
-              placeholder="Search here....."
+              placeholder="Procure aqui....."
             />
           </form>
         </div>
