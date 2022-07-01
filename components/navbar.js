@@ -83,22 +83,10 @@ function Navbar(props) {
                       <a>Persona Shop</a>
                     </Link>
                   </li>
-                  <li className={props.currentPath == "/about" ? "active" : ""}>
-                    <Link href="#">
-                      <a>Paginas</a>
+                  <li>
+                    <Link href="https://maikon.biz/gerador-de-personas/">
+                      <a>Gerador de Personas</a>
                     </Link>
-                    <ul className="dropdown">
-                      <li>
-                        <Link href="https://maikon.biz/gerador-de-personas/">
-                          <a>Gerador de Personas 2.0</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/about">
-                          <a>Sobre</a>
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
                   <li>
                     <Link href="https://maikon.biz/blog/">

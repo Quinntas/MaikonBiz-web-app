@@ -39,7 +39,7 @@ function HomePage(props) {
                       <h6>Summer Collection</h6>
                       <h2>Buyer Persona - 2022</h2>
                       <p>Para buyer personas</p>
-                      <Link href="#">
+                      <Link href="/persona">
                         <a className="primary-btn">
                           Comprar Agora <span className="arrow_right"></span>
                         </a>
@@ -60,7 +60,7 @@ function HomePage(props) {
                       <h6>Summer Collection</h6>
                       <h2>Perona Advogado - 2022</h2>
                       <p>Para advogados</p>
-                      <Link href="#">
+                      <Link href="/persona">
                         <a className="primary-btn">
                           Comprar Agora <span className="arrow_right"></span>
                         </a>
@@ -78,11 +78,11 @@ function HomePage(props) {
             <div className="row">
               <div className="col-lg-12">
                 <ul className="filter__controls">
+                  <li data-filter=".hot-sales">Hot Sales</li>
                   <li className="active" data-filter="*">
                     Best Sellers
                   </li>
                   <li data-filter=".new-arrivals">Novas Personas</li>
-                  <li data-filter=".hot-sales">Hot Sales</li>
                 </ul>
               </div>
             </div>
@@ -205,9 +205,9 @@ function HomePage(props) {
                       <p>Segundos</p>
                     </div>
                   </div>
-                  <a href="#" className="primary-btn">
-                    Comprar agora
-                  </a>
+                  <Link href="/persona">
+                    <a className="primary-btn">Comprar agora</a>
+                  </Link>
                 </div>
               </div>
             </div>

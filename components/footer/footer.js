@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import Link from "next/link";
 
 export default function Footer(props) {
   const {
@@ -131,9 +132,11 @@ export default function Footer(props) {
                   <script>document.write(new Date().getFullYear());</script>2022
                   Todos os direitos reservados |{" "}
                   <i className="fa fa-heart-o" aria-hidden="true"></i>{" "}
-                  <a href="https://maikon.biz/" target="_blank">
-                    Maikon Biz
-                  </a>
+                  <Link href="https://maikon.biz/">
+                    <a target="_blank" rel="noopener noreferrer">
+                      Maikon Biz
+                    </a>
+                  </Link>
                 </p>
               </div>
             </div>
