@@ -1,7 +1,7 @@
 import { Fragment, useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Layout from "../../components/layout";
-import { verifyToken, logout } from "/utils/requests";
+import { verifyToken, logout } from "../../utils/requests";
 import Image from "next/image";
 
 function PersonaPage({
@@ -246,10 +246,10 @@ export async function getServerSideProps({ req, query: { page = 1 } }) {
 
   const data = await fetch(
     process.env.BASE_URL +
-      "api/persona?pid=all&page=" +
-      page +
-      "&limit=" +
-      pageLimit,
+    "api/persona?pid=all&page=" +
+    page +
+    "&limit=" +
+    pageLimit,
     {}
   ).then((res) => {
     return res.json();
