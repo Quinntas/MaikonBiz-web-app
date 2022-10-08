@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { verify_token, logout } from "/utils/requests";
+import { verifyToken, logout } from "../../utils/requests";
 
 function AuthPage(props) {
   const router = useRouter();
@@ -8,7 +8,7 @@ function AuthPage(props) {
   useEffect(() => {
     const checkToken = async () => {
       if (props.token != "") {
-        const res = await verify_token(props.token);
+        const res = await verifyToken(props.token);
         if (res) {
           router.push("/");
         } else {
