@@ -1,8 +1,8 @@
 import path from 'path';
-import { promises as fs } from 'fs';
+const fs = require('fs');
 
 const jsonDirectory = path.join(process.cwd(), 'data')
-const data = JSON.parse(fs.readFileSync(jsonDirectory + "/personas_data.json", "utf8"));
+const data = JSON.parse(fs.readFileSync(jsonDirectory + "/personas_data.json", "utf-8"));
 
 const paginate = (array, pageSize, pageNumber) => {
   return array.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);

@@ -8,7 +8,7 @@ export default function Footer(props) {
     formState: { errors },
   } = useForm();
 
-  const handleContact = async (form) => {};
+  const handleContact = async (form) => { };
 
   return (
     <>
@@ -113,7 +113,7 @@ export default function Footer(props) {
                     <input
                       type="email"
                       name="email"
-                      required="true"
+                      required={true}
                       placeholder="Seu email"
                     ></input>
                     <button type="submit">
