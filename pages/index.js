@@ -125,7 +125,7 @@ function HomePage(props) {
                 <div className="product__item sale">
                   <div className="product__item__pic set-bg">
                     <Image
-                      src="https://i.pravatar.cc/300?img=50 "
+                      src="https://i.pravatar.cc/300?img=50"
                       alt=""
                       layout="fill"
                     ></Image>
