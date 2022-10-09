@@ -50,7 +50,7 @@ function RegisterPage(props) {
   };
 
   return (
-    <>
+    <div>
       <section className="vh-100">
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-100">
@@ -65,33 +65,6 @@ function RegisterPage(props) {
             </div>
             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
               <form onSubmit={handleSubmit(registerHandler)}>
-                <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                  <p className="lead fw-normal mb-0 me-3">Registrar com</p>
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-floating mx-1"
-                  >
-                    <i className="fab fa-facebook-f"></i>
-                  </button>
-
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-floating mx-1"
-                  >
-                    <i className="fab fa-twitter"></i>
-                  </button>
-
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-floating mx-1"
-                  >
-                    <i className="fab fa-linkedin-in"></i>
-                  </button>
-                </div>
-
-                <div className="divider d-flex align-items-center my-4">
-                  <p className="text-center fw-bold mx-3 mb-0">Ou</p>
-                </div>
                 <div className="form-outline mb-4">
                   <input
                     type="email"
@@ -129,8 +102,7 @@ function RegisterPage(props) {
                   >
                     Criar Conta
                   </button>
-                  <p className="small fw-bold mt-2 pt-1 mb-0">
-                    Ja tem uma conta?{" "}
+                  <p className="small fw-bold mt-2 pt-1 mb-0">Ja tem uma conta?
                     <Link href="/auth/login">
                       <a className="link-danger">Login</a>
                     </Link>
@@ -141,7 +113,7 @@ function RegisterPage(props) {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

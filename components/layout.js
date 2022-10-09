@@ -5,7 +5,7 @@ import Script from "next/script";
 
 export default function Layout(props) {
   return (
-    <>
+    <div>
       <Header title={props.title} />
       <Navbar
         token={[props.token.tokenInfo || ""]}
@@ -13,6 +13,7 @@ export default function Layout(props) {
       />
       {props.children}
       <Footer />
+
       <Script src="/js/jquery-3.3.1.min.js" strategy="beforeInteractive" />
       <Script src="/js/bootstrap.min.js" strategy="beforeInteractive" />
       <Script
@@ -29,6 +30,6 @@ export default function Layout(props) {
       <Script src="/js/owl.carousel.min.js" strategy="beforeInteractive" />
       <Script src="/js/mixitup.min.js" strategy="beforeInteractive" />
       <Script src="/js/main.js" />
-    </>
+    </div>
   );
 }

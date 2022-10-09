@@ -15,6 +15,9 @@ const required_registration_keys = [
 ];
 
 export default async (req, res) => {
+
+  console.log(encryptValue(req.body.user.password))
+
   if (req.method !== "POST") {
     return res.status(405).json({ sucess: false });
   }

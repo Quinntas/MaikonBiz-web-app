@@ -9,4 +9,8 @@ module.exports = {
   images: {
     domains: ["maikon.biz", "i.pravatar.cc", "mdbcdn.b-cdn.net"],
   },
+  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
 };
